@@ -1,0 +1,52 @@
+<body>
+  <h1><strong>Books</strong></h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Table</th>
+        <th>Body</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @books.each do |f| %>
+      <tr>
+      <td><%= f.title %></td>
+      <td><%= f.body %></td>
+      <td><%= link_to "Show",book_path(f.id) %></td>
+      <td><%= link_to "Edit",edit_book_path(f.id) %></td>
+      <td><%= link_to "Destroy", book_path(f.id), method: :delete, "data-confirm" => "Are you sure？" %></td>
+      </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+  <div class = "post">
+    <h2>New Book</h2>
+        <% if @book.errors.any? %>
+                <%= @book.errors.count %>件のerrorが発生しました
+              <ul>
+                  <% @book.errors.full_messages.each do |message| %>
+
+                  <li><%= message %></li>
+
+                <% end %>
+
+              </ul>
+        <% end %>
+    <%= form_with model:@book,local:true do |f| %>
+
+      <p><%= f.label :title,"Title"%></p>
+      <%= f.text_field :title%>
+      <p><%= f.label :body,"Body" %></p>
+      <%= f.text_area :body %>
+      <br>
+      <%= f.submit 'Create Book' %>
+
+    <% end %>
+  </div>
+</body>
+
+

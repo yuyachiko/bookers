@@ -1,0 +1,86 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+
+}
+
+h1{
+  font-size: 26px;
+
+  margin: 17px 0px;
+}
+
+p{
+  margin: 33px;
+  line-height: 18px;
+  font-size: 13px;
+}
+
+table{
+  text-align: center;
+  font-size: 13px;
+}
+
+th{
+  padding-bottom: 5px;
+  font-weight: bold;
+
+}
+
+td{
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h2{
+  font-size: 19.5px;
+  margin: 16px 0px;
+  font-weight: bold;
+}
+
+tr td:nth-child(1){
+  width: 138px;
+}
+
+tr td:nth-child(2){
+  width: 400px;
+}
+
+// postクラスのcss
+
+.post p{
+  margin: 10px 0px 5px 0px;
+}
+
+.post span{
+  font-size: 13px;
+}
+
+// show_html のcss
+
+.show p:nth-child(1){
+  color: green;
+}
+
+.show span{
+  font-size: 13px;
+}
+
+// edit_htmlのcss
+.edit p{
+  margin: 10px 0px 5px 0px;
+}
+
+.edit span{
+  font-size: 13px;
+}
